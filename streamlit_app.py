@@ -85,7 +85,7 @@ if ingredients_list:
         # se agrega + ' ' para agregar un espacio entre cada selección
         # de frutas y no se vea amontonado
         ingredients_string += fruit_chosen + ' '
-        st.subheader(fruit_chosen + 'Nutrition Information')
+        st.subheader(fruit_chosen + ' Nutrition Information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+ fruit_chosen)
         # st.text(smoothiefroot_response.json())
         sf_df=st.dataframe(data=smoothiefroot_response.json(),use_container_width=True)
