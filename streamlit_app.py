@@ -79,12 +79,12 @@ if ingredients_list:
 
     # bucle for para agregar frutas dentro de ingredients_list
     #  la lista ingredients_string
-    for fruits_chosen in ingredients_list:
+    for fruit_chosen in ingredients_list:
 
         #+= significa " agregar esto a lo que  ya está en la variable "
         # se agrega + ' ' para agregar un espacio entre cada selección
         # de frutas y no se vea amontonado
-        ingredients_string += fruits_chosen + ' '
+        ingredients_string += fruit_chosen + ' '
         st.subheader(fruit_chosen + 'Nutrition Information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+ fruit_chosen)
         # st.text(smoothiefroot_response.json())
