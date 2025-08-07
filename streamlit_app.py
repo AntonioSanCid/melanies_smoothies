@@ -1,7 +1,7 @@
 # Import python packages
 import streamlit as st
 # from snowflake.snowpark.context import get_active_session
-
+import requests
 ## importar función llamada col
 from snowflake.snowpark.functions import col
 
@@ -128,7 +128,7 @@ if ingredients_list:
 #Agrega un cuadro con nombre para pedidos de batidos
 
 
-import requests
+
 smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
 # st.text(smoothiefroot_response.json())
 sf_df = st.dataframe(data=smoothiefroot_response.json(), use_container_width=True)
